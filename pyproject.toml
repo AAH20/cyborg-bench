@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cyborg-bench"
+version = "1.0.0"
+description = "The Apex Benchmark Suite & Verification Harness for Physical AI, Humanoid Robotics, BCIs & Cyborg Cybernetics"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "Ahmed Hassan", email = "ahmed@a2zsoc.com" }
+]
+keywords = [
+    "physical-ai",
+    "bci-benchmark",
+    "humanoid-robotics",
+    "cyborg-cybernetics",
+    "embodied-ai-eval",
+    "control-barrier-functions",
+    "neural-decoding",
+    "zero-knowledge-biometrics",
+    "oax-protocol"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Security"
+]
+
+dependencies = []
+
+[project.optional-dependencies]
+all = [
+    "numpy>=1.24.0",
+    "cryptography>=41.0.0"
+]
+
+[project.scripts]
+cyborg-bench = "cyborgbench.cli:main"
+cyborgbench = "cyborgbench.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
